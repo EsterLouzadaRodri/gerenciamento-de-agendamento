@@ -1,7 +1,7 @@
 package com.agendio.agendamento.services;
 
 import com.agendio.agendamento.model.Pessoa;
-import com.agendio.agendamento.repository.RepositoryPessoa;
+import com.agendio.agendamento.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class PessoaServices {
 
     @Autowired
-    private RepositoryPessoa query;
+    private PessoaRepository query;
 
     public List<Pessoa> getPessoa(){
         return query.findAll();
