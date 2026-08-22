@@ -1,4 +1,4 @@
-package com.agendio.agendamento.Swagger;
+package com.agendio.agendamento.config;
 
 
 import io.swagger.v3.oas.models.OpenAPI;
