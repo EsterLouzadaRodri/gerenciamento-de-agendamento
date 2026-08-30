@@ -25,10 +25,16 @@ public class Agendamento {
     @Column(name = "descricao", length = 255)
     String descricao;
 
+    //H2
     @Enumerated(EnumType.STRING)
-    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
-    @Column(name = "status", nullable = false, columnDefinition = "status_agendamento")
+    @Column(name = "status", nullable = false)
     StatusAgendamento status = StatusAgendamento.pendente;
+
+    //PostgreSQL
+//    @Enumerated(EnumType.STRING)
+//    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
+//    @Column(name = "status", nullable = false, columnDefinition = "status_agendamento")
+//    StatusAgendamento status = StatusAgendamento.pendente;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pessoa1_id", nullable = false)
